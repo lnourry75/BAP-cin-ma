@@ -1,0 +1,253 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+<style>
+
+.pingpassion .container .nav {
+  padding-right: 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.pingpassion .container .nav ul li ul {
+  display: block;
+}
+.pingpassion .container .nav li {
+  margin-right: 20px;
+}
+.pingpassion .container .nav li ul {
+  display: block;
+}
+.pingpassion .container .edf {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 170px;
+}
+.pingpassion .container .edf img {
+  height: 30px;
+  margin-top: 15px;
+}
+.pingpassion .container .right {
+  margin-top: 20px;
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.pingpassion .container .right .connexion {
+  display: flex;
+  margin-right: 20px;
+}
+.pingpassion .container .right .connexion img {
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+.pingpassion .container .right .panier {
+  display: flex;
+}
+.pingpassion .container .right .panier img {
+  width: 45px;
+  height: 50px;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+.pingpassion .container .arrow {
+  width: 50px;
+  margin-top: 45px;
+  margin-left: 10px;
+}
+.pingpassion .container h4 {
+  margin-top: 37px;
+}
+.pingpassion .container .ping {
+  width: 300px;
+  margin-top: 20px;
+}
+.pingpassion .container .loupe {
+  width: 50px;
+  margin-top: 35px;
+  margin-left: 15px;
+}
+
+.footer {
+  color: white;
+}
+.footer a {
+
+  color: white;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+}
+.footer .barre {
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 5px;
+  border-radius: 5px;
+}
+.footer .footer_high {
+  padding: 30px 0 0;
+  background-color: #241E61;
+}
+.footer .footer_high .container {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+}
+.footer .footer_high .container .pingpassion {
+  display: block;
+}
+
+.lido{
+  margin-top: 100px;
+  width: 150px;
+
+}
+
+.marques > img{
+  width: 75px;
+  padding-right: 10px;
+}
+
+.footer .footer_down {
+  min-height: 100px;
+  background-color: #241E61;
+  position: relative;
+}
+.footer .footer_down .paiement {
+  float: right;
+  position: absolute;
+  top: 20px;
+  right: 400px;
+}
+.footer .footer_down .copyright {
+  margin-bottom: 10px;
+  position: absolute;
+  top: 40px;
+}
+.footer .footer_down h4 {
+  padding-right: 20px;
+  color: rgba(128, 128, 128, 0.774);
+}
+.footer .footer_down p {
+  color: #b3adad;
+}
+.footer .footer_down .container {
+  width: 70%;
+  margin: 0 auto;
+}
+.footer .footer_down .container .menu {
+  display: flex;
+}
+
+.mention{
+  margin-top: 50px;
+}
+
+</style>
+
+<div class="recapitulatif">
+
+<><button>
+
+</div>
+
+<div class="footer">
+    <div class="footer_high">
+
+    <div class="container">
+
+    <div class="lelido">
+       <img class="fit-picture"
+                         src="{{asset('img/Logo_Lido__4_Delta_blanc.png')}}"
+                         alt="">
+    <img class="lido" src="<?php echo get_template_directory_uri(); ?>/img/Logo_Lido__4_Delta_blanc.png" alt="">
+    </div>
+
+        <div class="pingpassion">
+        <h3>Cinéma Le Lido</h3>
+    <p>Place Jacques-Tatti
+94100 Saint-Maur-des-Fossés
+Tél. 01 04 83 87 79</p>
+
+<h3>Cinéma 4 DELTA</h3>
+<p>81 ter, avenue du Bac
+94100 Saint-Maur-des-Fossés
+Tél.08 92 89 28 92</p>
+
+
+</div>
+
+
+    <div class="follow">
+        <h3>Nous suivre :</h3>
+         <img class="fit-picture"
+                     src="{{asset('img/Logo-Facebook-rond.png')}}"
+                     alt="">
+
+
+        <h3>Restez informé :</h3>
+         <img class="fit-picture"
+                     src="{{asset('img/mail_blanc.png')}}"
+                     alt="">
+
+
+        <p>Newsletter</p>
+
+    </div>
+
+    <div class="etiquettes">
+        <h3>Pages :</h3>
+
+        <br>
+        <a href="#">A l'affiche</a>
+        <br>
+        <a href="#">Nos Rendez-vous</a>
+        <br>
+        <a href="#">Festivals</a>
+        <br>
+        <a href="#">Jeune public</a>
+        <br>
+        <a href="#">Cinéma</a>
+        <br>
+        <a href="#">Infos pratique</a>
+    </div>
+
+    <div class="marques">
+        <h3>Nos partenaires :</h3>
+        <img class="fit-picture"
+                     src="{{asset('img/stmaur_ville_logo.png')}}"
+                     alt="">
+                      <img class="fit-picture"
+                                          src="{{asset('img/logo_cnc_blanc.png')}}"
+                                          alt="">
+
+
+        <br><br>
+        <img src="img/logo_afcae.png" alt="">
+
+        <img class="fit-picture"
+             src="{{asset('img/logo_ACRIF_blanc.png')}}"
+             alt="">
+
+
+    </div>
+
+    <div class="mention">
+
+        <p>Mentions légales - CGV</p>
+
+        <p>Politique de confidentialité</p>
+
+        <p>Gestion des cookies</p>
+    </div>
+
+
+    </div>
+    </div>
+
+{% endblock %}

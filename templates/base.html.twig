@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}
+
+
+
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+        <style>
+
+        </style>
+
+
+
+    {% endblock %}
+
+    <header>
+            <div class="row2">
+                <div><img class="logo" src="img/Logo_Lido__4_Delta_blanc.png"></div>
+                <div class="recherche"><input type="search" placeholder="Rechercher un film"><img class="search" src="img/search_blanc.png"></div>
+                <div class="row">
+                    <div class="column2">
+                        <h3>Newsletter</h3>
+                        <img src="img/mail_blanc.png" alt="">
+                    </div>
+
+                    <div class="column2">
+                        <img src="img/Logo-Facebook-rond.png" alt="">
+                    </div>
+
+                    <div class="column2">
+                        <p>Théâtre de</p>
+                        <p>Saint-Maur</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <nav>
+
+                <label for="toggle">☰</label>
+                <input type="checkbox" id="toggle">
+                <div class="main_pages">
+                    <a href="#">A l'affiche</a>
+                    <a href="#">Nos Rendez-vous</a>
+                    <a href="#">Festivals</a>
+                    <a href="#">Jeune public</a>
+                    <a href="#">Cinema</a>
+                    <a href="#">Infos pratiques</a>
+                </div>
+            </nav>
+
+        </header>
+
+    {% block javascripts %}
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+</head>
+<body>
+
+    {% block body %}
+
+    {% endblock %}
+
+     <footer>
+
+            <div class="footer">
+
+                <div class="footer_high">
+
+
+                <div class="container">
+                    <img class="logo" src="img/Logo_Lido__4_Delta_blanc.png">
+
+                <div class="lelido">
+
+                </div>
+
+                    <div class="pingpassion">
+                    <h3>Cinéma Le Lido</h3>
+                <p>Place Jacques-Tatti
+            94100 Saint-Maur-des-Fossés
+            Tél. 01 04 83 87 79</p>
+
+            <h3>Cinéma 4 DELTA</h3>
+            <p>81 ter, avenue du Bac
+            94100 Saint-Maur-des-Fossés
+            Tél.08 92 89 28 92</p>
+
+
+            </div>
+
+
+                <div class="follow">
+                    <h3>Nous suivre :</h3>
+                    <img src="img/Logo-Facebook-rond.png" alt="">
+
+                    <h3>Restez informé :</h3>
+                    <img src="img/mail_blanc.png" alt="">
+
+                    <p>Newsletter</p>
+
+                </div>
+
+                <div class="etiquettes">
+                    <h3>Pages :</h3>
+
+                    <br>
+                    <a href="#">A l'affiche</a>
+                    <br>
+                    <a href="#">Nos Rendez-vous</a>
+                    <br>
+                    <a href="#">Festivals</a>
+                    <br>
+                    <a href="#">Jeune public</a>
+                    <br>
+                    <a href="#">Cinéma</a>
+                    <br>
+                    <a href="#">Infos pratique</a>
+                </div>
+
+                <div>
+                    <h3>Nos partenaires :</h3>
+                    <div  class="marques">
+                        <div class="column">
+                        <img src="img/stmaur_ville_logo.png" alt="">
+                        <img src="img/logo_cnc_blanc.png" alt="">
+                        </div>
+                        <div class="column">
+                        <img src="img/logo_afcae.png" alt="">
+                        <img src="img/logo_ACRIF_blanc.png" alt="">
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="mention">
+
+                    <p>Mentions légales - CGV</p>
+
+                    <p>Politique de confidentialité</p>
+
+                    <p>Gestion des cookies</p>
+                </div>
+
+
+                </div>
+                </div>
+            </footer>
+
+</main>
+<script src="{{asset('js/main.js')}}">
+</body>
+</html>

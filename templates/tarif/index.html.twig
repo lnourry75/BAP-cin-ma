@@ -1,0 +1,650 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TarifController!{% endblock %}
+
+{% block body %}
+
+<script>
+window.onload = function () {
+    let clickDiv = document.getElementById("click-div");
+    clickDiv.onclick = incrementClick;
+
+    let resetBtn = document.getElementById("reset-button");
+    resetBtn.onclick = resetCounter;
+}
+
+var counterVal = 0;
+
+incrementClick = function() {
+    updateDisplay(++counterVal);
+}
+
+function resetCounter() {
+    updateDisplay(--counterVal);
+}
+
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
+}
+</script>
+
+<style>
+
+
+    .recapitulatif{
+        padding: 120px;
+        padding-bottom: 0px;
+
+    }
+
+    .button{
+        display: flex;
+
+
+    }
+
+    .retour{
+        margin-right: 20px;
+    }
+
+    .back{
+        margin-top: 5px;
+    }
+
+    .trace{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    h1{
+        color: white;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .mode{
+
+    }
+
+    .img{
+        margin: 0 auto;
+        margin-left: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imgosnic2{
+        width: 600px;
+    }
+
+    .commande{
+        margin-left: 100px;
+    }
+
+    h2{
+
+    }
+
+    .info{
+        width: 300px;
+        text-align: center;
+        border: 3px solid #707070;
+        border-radius: 60px;
+        margin-top: 100px;
+    }
+
+    .paiement{
+        margin-top: 100px;
+    }
+
+    .carteabo{
+        display: flex;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .fleche{
+        margin-top: 2px;
+    }
+
+    .carte{
+        display: flex;
+        background-color: #EEEEEE;
+        height: 200px;
+    }
+
+    .renseigner{
+        margin: 0 auto;
+        margin-top: 90px;
+        display: flex;
+    }
+
+    #card{
+        height:30px;
+        width: 200px;
+
+    }
+
+    .numéro{
+        margin-right: 300px;
+    }
+
+    .algo{
+        display: flex;
+    }
+
+    .card{
+        padding: 10px;
+        border-radius: 90px;
+        width: 100px;
+        margin-left: 50px;
+        margin-top: 9px;
+        border: solid 1px #707070;
+    }
+
+    .cartebancaire{
+        margin-left: 220px;
+
+    }
+
+    .cartebanc{
+        display: flex;
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    .tarif{
+        background-color: #EEEEEE;
+        padding: 100px;
+        padding-left: 400px;
+        padding-right: 400px;
+    }
+
+    .plein{
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .prix{
+        margin-left: 605px;
+
+    }
+
+    .prix1{
+        margin-left: 597px;
+    }
+
+    .prix2{
+        margin-left: 550px;
+    }
+
+    .prix3{
+        margin-left: 562px;
+    }
+
+    .prix4{
+        margin-left: 535px;
+    }
+
+    .prix5{
+        margin-left: 600px;
+    }
+
+    .prix6{
+        margin-left: 580px;
+    }
+
+    .prix7{
+        margin-left: 505px;
+    }
+
+    .prix8{
+        margin-left: 510px;
+    }
+
+    .ticket{
+        margin-left: 200px;
+    }
+
+    .prixdecrit{
+        display: flex;
+
+    }
+
+    .description{
+        width: 400px;
+        margin-bottom: 50px;
+    }
+
+    .jaccepte{
+        height: 250px;
+        margin: 0 auto;
+        color: #707070;
+
+    }
+
+    .conditions{
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        margin-left: 30%;
+        margin-top: 100px;
+    }
+
+    .accepter {
+        margin-left: -280px;
+        margin-top: 7px;
+    }
+
+    .validation{
+        margin-top: 70px;
+        padding: 10px;
+        border-radius: 90px;
+        width: 100px;
+        margin-left: 47%;
+        color: #707070;
+        border: solid 2px #707070;
+
+    }
+
+    #check{
+        margin-top: 2px;
+    }
+
+
+
+
+    @media all and (orientation: portrait){
+        h1 {
+            color: black;
+            font-size: 16px;
+            width: 200px;
+            margin-left: -100px;
+        }
+
+        h2 {
+
+            font-size: 14px;
+        }
+
+        .info {
+            width: 95px;
+            text-align: center;
+            border: 3px solid #707070;
+            border-radius: 60px;
+            margin-top: 42px;
+        }
+
+        .button {
+            display: flex;
+            font-size: 12px;
+            margin-left: -100px;
+        }
+
+        a {
+            width: 35px;
+        }
+
+        .imgosnic2 {
+            width: 221px;
+            height: 152px;
+            margin-left: -424px;
+        }
+
+        .mode {
+            margin-left: -99px;
+        }
+
+        .trace {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 200px;
+            height: 703px;
+            left: 0;
+        }
+
+        h3 {
+            margin-left: -202px;
+            font-size: 12px;
+        }
+
+        .fleche {
+            margin-top: 2px;
+            width: 15px;
+        }
+
+        .retour {
+            margin-right: 20px;
+            width: 20px;
+            margin-top: 2px;
+        }
+
+        .commande {
+            margin-left: 24px;
+        }
+
+        .info  > h3{
+            margin-left: 0px;
+        }
+
+        .numéro {
+            width: 300px;
+            font-size: 10px;
+
+            margin-right: -122px;
+            margin-left: -46px;
+        }
+
+        #card {
+            height: 20px;
+            width: 100px;
+        }
+
+        .card {
+            padding: 10px;
+            border-radius: 90px;
+            width: 72px;
+            margin-left: 9px;
+            margin-top: -16px;
+            border: solid 1px #707070;
+        }
+
+        .tarif {
+            background-color: #EEEEEE;
+            padding: 100px;
+            font-size: 12px;
+            padding-left: 26px;
+            padding-right: 400px;
+        }
+
+        .description {
+            width: 140px;
+            margin-bottom: 50px;
+        }
+
+        .conditions {
+            display: flex;
+            margin: 0 auto;
+            text-align: center;
+            margin-left: 15%;
+            margin-top: 100px;
+        }
+
+        .validation {
+            margin-top: 70px;
+            padding: 10px;
+            border-radius: 90px;
+            width: 100px;
+            margin-left: 38%;
+            color: #707070;
+            border: solid 2px #707070;
+        }
+
+        .prix {
+            margin-left: 160px;
+        }
+
+        .ticket {
+            display: flex;
+            margin-left: 78px;
+        }
+
+        h4#click-div {
+            margin-top: -15px;
+            margin-left: 16px;
+        }
+
+
+    element.style {
+    }
+    .prix1 {
+        margin-left: 169px;
+    }
+
+    .ticket {
+        display: flex;
+        margin-left: 78px;
+        margin-right: 15px;
+    }
+
+    .prix2 {
+        margin-left: 154px;
+    }
+
+    .prix3 {
+        margin-left: 162px;
+    }
+
+    .prix4 {
+        margin-left: 137px;
+    }
+
+    .prix5 {
+        margin-left: 164px;
+    }
+
+    .prix6 {
+        margin-left: 149px;
+    }
+
+    .prix7 {
+        margin-left: 134px;
+    }
+
+    .prix8 {
+        margin-left: 134px;
+    }
+
+
+    }
+</style>
+
+
+     <div class="recapitulatif">
+
+            <img src="img/Tracé 5.png" alt="" class="trace">
+
+            <div class="button">
+            <a href="#"><img class="retour" src="img/contour-du-bouton-circulaire-fleche-droite.png" alt=""></a>
+            <p class="back">Retour en arrière</p>
+
+        </div>
+
+        <h1>Récapitulatif commande</h1>
+
+        <div class="img">
+            <img  class="imgosnic2" src="img/sonic-2-photo-1424861.png" alt="">
+            <div class="commande">
+            <h2>Sonic 2 le film</h2>
+            <div class="info">
+                <h3>VF</h3>
+                <h3>11h</h3>
+                <h3>4 Delta</h3>
+            </div>
+        </div>
+        </div>
+        <div class="paiement">
+
+            <h2 class="mode">Mode de paiement</h2>
+
+            <div class="carteabo">
+            <h3>Carte d'abonnement</h3>&nbsp&nbsp
+            <img class="fleche" src="img/fleche-vers-le-bas.png" alt="">
+        </div>
+        </div>
+    </div>
+
+            </div>
+
+            <div class="carte">
+
+                <div class="renseigner">
+
+                <p class="numéro">Veuillez renseigner votre numéro de carte</p>
+
+                <input type="number" name="" id="card"></input>
+                <a href="#"><button class="card">Ajouter</button></a>
+            </div>
+            </div>
+
+            <div class="cartebancaire">
+            <div class="cartebanc">
+                <h3>Carte bancaire</h3>&nbsp&nbsp
+                <img class="fleche" src="img/fleche-vers-le-bas.png" alt="">
+            </div>
+        </div>
+
+        <div class="tarif">
+
+            <div class="plein">
+                <h4>Tarif plein</h4>
+
+                <h4 class="prix">8€</h4>
+                <h4 class="ticket" id="reset-button">-  &nbsp&nbsp</h4>
+                <h4 id="counter-label">0  </h4>
+                <h4 id="click-div">&nbsp&nbsp +</h4>
+
+            </div>
+
+            <div class="prixdecrit">
+                <h4>Tarif réduit</h4>
+
+                <h4 class="prix1">7€</h4>
+                <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+
+            </div>
+            <div class="description">
+            <p>Spectateurs âgés de plus de 60 ans, demandeurs d’emploi, abonnés du Théâtre de Saint-Maur, familles nombreuses, entraide, détenteurs du Pass Navigo, hors saison Opéra et ballet.</p>
+        </div>
+
+            <div class="plein">
+                <h4>Tarif jeune -18 ans </h4>
+
+                <h4 class="prix2">5,50€</h4>
+                <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+            </div>
+
+            <div class="plein">
+                <h4>Tarif enfant -14 ans</h4>
+
+                <h4 class="prix3">4€</h4>
+                <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+            </div>
+
+            <div class="plein">
+                <h4>Tarif dimanche matin</h4>
+
+                <h4 class="prix4">5,50€</h4>
+                <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+            </div>
+
+            <div class="prixdecrit">
+                <h4>Tarif tribu</h4>
+
+                <h4 class="prix5">20€</h4>
+                <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+
+            </div>
+            <div class="description">
+            <p>2 adultes + 2 enfants de -14 ans</p>
+        </div>
+
+            <div class="plein">
+                <h4>Tarif scolaire</h4>
+
+                <h4 class="prix6">3,50€</h4>
+                <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+            </div>
+
+            <div class="prixdecrit">
+                <h4>Carte d'abonnement 10 places</h4>
+
+                <h4 class="prix7">55€</h4>
+                <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+
+            </div>
+            <div class="description">
+            <p>Soit 5,50€ la place
+                Valable 1 an de date à date</p>
+        </div>
+
+        <div class="prixdecrit">
+            <h4>Carte d'abonnement 5 places</h4>
+
+            <h4 class="prix8">30€</h4>
+            <h4 class="ticket" id="reset-button">-&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp+</h4>
+
+
+
+        </div>
+        <div class="description">
+        <p>Soit 6€ la place
+            Valable 6 mois de date à date</p>
+    </div>
+
+
+        </div>
+
+        <div class="cartebancaire">
+            <div class="cartebanc">
+                <h3>Ciné-chèques</h3>&nbsp&nbsp
+                <img class="fleche" src="img/fleche-vers-le-bas.png" alt="">
+            </div>
+        </div>
+
+        <div class="carte">
+
+            <div class="renseigner">
+
+            <p class="numéro">Veuillez renseigner votre numéro de carte</p>
+
+            <input type="number" name="" id="card"></input>
+            <a href="#"><button class="card">Ajouter</button></a>
+        </div>
+        </div>
+
+        <div class="cartebancaire">
+            <div class="cartebanc">
+                <h3>Chèque ciné universel</h3>&nbsp&nbsp
+                <img class="fleche" src="img/fleche-vers-le-bas.png" alt="">
+            </div>
+        </div>
+
+        <div class="carte">
+
+            <div class="renseigner">
+
+            <p class="numéro">Veuillez renseigner votre numéro de carte</p>
+
+            <input type="number" name="" id="card"></input>
+            <a href="#"><button class="card">Ajouter</button></a>
+        </div>
+        </div>
+
+        <div class="jaccepte">
+            <div class="conditions">
+                <input type="checkbox" name="" id="check">&nbsp;&nbsp;
+                <p class="accepter">J’accepte les Conditions générales de réservation</p>
+            </div>
+                <a href="#"><button class="validation">Valider</button></a>
+            </div>
+        </div>
+
+
+
+
+</div>
+
+
+
+{% endblock %}
