@@ -3,18 +3,478 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+
+
+
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+   input{
+       border-radius: 40px;
+       width: 30vw;
+       height: 30px;
+       padding: 15px;
+   }
+   a{
+       padding-left: 2%;
+       padding-right: 2%;
+   }
+   h1{
+       color: white;
+       padding-left: 8%;
+   }
+   h2{
+       padding: 8%;
+       font-size: 45px;
+       font-weight: 400;
+       padding-left: 22%;
+       padding-right: 20%;
+
+   }
+   h3{
+       align-self: center;
+   }
+   h4{
+       padding-bottom: 5px;
+   }
+   h5{
+       font-size: 22px;
+       color: white;
+       font-weight: bold;
+       padding-left: 8%;
+   }
+   h6{
+       font-size: 16px;
+       color: white;
+       padding-left: 8%;
+   }
+   img{
+       padding: 5px;
+   }
+   .recherche{
+       display: flex;
+   }
+   .sonic{
+       height: 100%;
+       align-self: center;
+       max-width:100%;
+   }
+   .btn {
+       background-color: white;
+       color: black;
+       text-decoration: none;
+       border: 3px solid black;
+       padding: 0.8rem 3rem;
+       cursor: pointer;
+       font-size: 1.7rem;
+       border-radius: 40px;
+       margin: 8rem;
+     }
+
+     .btn2 {
+       background-color: white;
+       color: black;
+       text-decoration: none;
+       border: 1.5px solid black;
+       padding: 25px;
+       cursor: pointer;
+       font-size: 1rem;
+       border-radius: 45px;
+       place-self: center;
+       margin: 15px;
+
+     }
+
+     .btn3 {
+       display: flex;
+       flex-direction: column;
+       background-color: white;
+       color: black;
+       text-decoration: none;
+       border: 3px solid black;
+       padding: 0.8rem 3rem;
+       cursor: pointer;
+       font-size: 1.7rem;
+       border-radius: 40px;
+     }
+
+   .search{
+       width: 25px;
+       height: 25px;
+   }
+   .main {
+       padding: 5%;
+   }
+
+   .row {
+       display: flex;
+       flex-direction: row;
+       padding: 2%;
+       padding-left: 8%;
+       padding-right: 8%;
+
+     }
+   .row2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+   }
+   .space{
+       padding: 10px;
+   }
+   .spaced{
+       display: flex;
+       justify-content: space-between;
+       padding-left: 20%;
+       padding-right: 20%;
+   }
+   .column {
+       flex-direction: column;
+       border-radius: 5px;
+       padding: 1.5%;
+     }
+
+     .column3 {
+       flex-direction: column;
+       border-radius: 5px;
+       padding: 1.5%;
+       text-align: center;
+       margin-top: 5%;
+       margin-bottom: 5%
+     }
+
+   .flex{
+       display: flex;
+   }
+
+   .column2 {
+       flex-direction: column;
+       border-radius: 5px;
+       padding: 1.5%;
+       margin-left: 10px;
+       margin-right: 10px;
+       text-align: center;
+     }
+
+
+   .logo {
+       max-width: 100%;
+       width: 200px;
+       height: fit-content;
+       align-self: center;
+   }
+
+
+   .trace{
+       position: absolute;
+       z-index: -1;
+       top: 60px;
+       left: -400px;
+       width: 70vw;
+       height: 140vh;
+
+   }
+
+   /* Header */
+
+   header {
+       background-color: #241E61;
+       color: #ffffff;
+       max-height: 100%;
+       padding: 2%;
+       padding-left: 10%;
+       padding-right: 10%;
+
+     }
+   nav a {
+       color: white;
+       text-decoration: none;
+       padding: 5px 5px 5px 5px;
+       font-size: 20px;
+       font-family: "Tablet Gothic Title";
+
+   }
+
+     nav {
+       display: flex;
+       justify-content: space-around;
+       gap: 1.5vw;
+     }
+
+     /* Fin du header */
+
+     /* Menu burger */
+
+     /* Sidenav menu */
+
+
+
+
+     label
+   {
+       display: none;
+   }
+   label, #toggle
+   {
+       display: none;
+   }
+
+
+   @media all and (max-width: 990px)
+   {
+       nav .main_pages
+       {
+           display: none;
+           flex-direction: column;
+           height: 220px;
+       }
+
+       nav .main_pages a {
+           width: 50%;
+       }
+
+       label
+       {
+           width: 30px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin: 0 auto;
+           font-size: 40px;
+           color: white;
+           cursor: pointer;
+       }
+
+       #toggle:checked + .main_pages {
+           display: flex;
+       }
+   }
+
+
+
+   /* Footer */
+
+
+     .footer {
+       color: white;
+       margin-top: 240px;
+     }
+     .footer a {
+
+       color: white;
+       text-decoration: none;
+       padding: 5px 5px 5px 5px;
+     }
+     .footer .barre {
+
+       background-color: rgba(255, 255, 255, 0.3);
+       height: 5px;
+       border-radius: 5px;
+     }
+     .footer .footer_high {
+
+       background-color: #241E61;
+       padding: 2%;
+     }
+     .footer .footer_high .container {
+
+       width: 95%;
+       margin: 0 auto;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+     }
+
+     @media only screen and (max-width: 1200px) {
+         .marques{
+           display: flex;
+           flex-direction: row;
+         }
+       .row {
+         flex-direction: column;
+       }
+       nav{
+           display: flex;
+           flex-direction: column;
+       }
+       .row2 {
+           flex-direction: column;
+           align-items: center;
+         }
+       .btn{
+           font-size: 20px;
+           margin: 0;
+           display: flex;
+           justify-content: center;
+       }
+       .spaced {
+           flex-direction: column;
+         }
+       .column{
+           text-align: center;
+       }
+
+   .footer .footer_high .container{
+           flex-direction: column;
+       }
+       .flex{
+           justify-content:center;
+       }
+       .trace{
+           top: 0;
+           left: 0;
+           width: 0;
+
+       }
+       .trace{
+           height: 100%;
+       }
+     }
+
+
+     /* Page 2 */
+
+     *, ::before, ::after {
+       margin: 0;
+       padding: 0;
+
+     }
+
+     .container2 {
+       max-width: 800px;
+       margin: 0 auto;
+       padding: 50px;
+     }
+
+     .slider img {
+       max-width: 100%;
+       display: none;
+     }
+     img.active {
+       display: block;
+       animation: fade 0.8s;
+     }
+     @keyframes fade {
+       from {
+         opacity: 0;
+       }
+       to {
+         opacity: 1;
+       }
+     }
+
+     .cont-btn {
+       width: 100%;
+       height: auto;
+       border: 1px solid #000;
+       box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+       display: flex;
+       justify-content: center;
+     }
+     .btn-nav {
+       font-size: 50px;
+       margin: 0 15px;
+       cursor: pointer;
+     }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/sites/symfony/cinema/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/sites/symfony/cinema/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+
+
+  <img class="trace" src="img/Trace_5.png">
+     <div class="main">
+             <div class="row">
+                 <div class="column">
+                 <div class="column">
+                     <h1>Titre du Film</h1>
+                     <h5>Date</h5>
+                     <h6>Cinema</h6>
+
+
+                 </div>
+
+                 <div class="column3">
+                     <a href="../seance" class="btn3">Voir les Séances</a>
+
+                 </div>
+                 <div class="column3">
+                     <a href="https://www.youtube.com/watch?v=SqH3-sCkZQw" class="btn3">Voir la bande-annonce</a>
+
+                 </div>
+
+             </div>
+
+
+                 <div class="container2">
+
+                     <div class="slider">
+                       <img id="slide" class="active" src="img/sonic-le-film.png">
+                       <img id="slide" src="img/LesAnimauxFantastiques3-Banniere-800x445.jpg">
+                       <img id="slide" src="img/maxresdefault.jpg">
+                       <img id="slide" src="img/empire.png">
+                       <img id="slide" src="img/mensonge.jpg">
+                       <img id="slide" src="img/en-meme-temps.jpg">
+                     </div>
+
+                     <div class="cont-btn">
+                       <div class="btn-nav left">←</div>
+                       <div class="btn-nav right">→</div>
+                     </div>
+
+                   </div>
+             </div>
+
+
+
+     </div>
+
+     <script>
+     const items = document.querySelectorAll('img');
+     const nbSlide = items.length;
+     const suivant = document.querySelector('.right');
+     const precedent = document.querySelector('.left');
+     let count = 5;
+
+     function slideSuivante(){
+         items[count].classList.remove('active');
+
+         if(count < nbSlide - 1){
+             count++;
+         } else {
+             count = 0;
+         }
+
+         items[count].classList.add('active')
+         console.log(count);
+
+     }
+     suivant.addEventListener('click', slideSuivante)
+
+
+     function slidePrecedente(){
+         items[count].classList.remove('active');
+
+         if(count > 0){
+             count--;
+         } else {
+             count = nbSlide - 1;
+         }
+
+         items[count].classList.add('active')
+         // console.log(count);
+
+     }
+     precedent.addEventListener('click', slidePrecedente)
+
+     function keyPress(e){
+         console.log(e);
+
+         if(e.keyCode === 37){
+             slidePrecedente();
+         } else if(e.keyCode === 39){
+             slideSuivante();
+         }
+     }
+     document.addEventListener('keydown', keyPress)
+     </script>
+
 {% endblock %}

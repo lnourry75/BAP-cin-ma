@@ -13,7 +13,7 @@ class AppFixtures extends Fixture
         for ($i = 1; $i <= 20; $i++) {
             $film = new Films();
             $film->setName('Sonic 2 le film');
-            $film->setPicture('image');
+            $film->setPicture('https://fr.web.img5.acsta.net/pictures/22/03/14/15/39/4137538.jpg');
             $film->setSortie(new \DateTime());
             $film->setDuree('2h 02min');
             $film->setRealisateur('De Patrick Casey');

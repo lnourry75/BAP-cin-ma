@@ -29,11 +29,11 @@ class PayementController extends AbstractController
             'line_items' => [
                 [
                     'price_data' => [
-                        'currency' => 'usd',
+                        'currency' => 'eur',
                         'product_data' => [
-                            'name' => 'T-shirt',
+                            'name' => 'Tarif plein',
                         ],
-                        'unit_amount' => 10000,
+                        'unit_amount' => 800,
                     ],
                     'quantity' => 1,
                 ]

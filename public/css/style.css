@@ -21,6 +21,8 @@ input{
 a{
     padding-left: 2%;
     padding-right: 2%;
+    text-decoration: none;
+    color: black;
 }
 h1{
     color: white;
